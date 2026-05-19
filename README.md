@@ -228,7 +228,7 @@ befor start contribution star the repo
 4. Push to the branch (`git push origin feature/YourFeature`)
 5. Open a Pull Request
 
-Please review [CONTRIBUTION.md](CONTRIBUTION.md) for details.
+Please review [CONTRIBUTION.MD](CONTRIBUTION.MD) for details.
 
 ---
 
