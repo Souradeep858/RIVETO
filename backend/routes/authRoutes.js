@@ -1,5 +1,12 @@
 import express from "express";
-import { login, registration, logOut, googleLogin, adminLogin } from "../controller/authcontroller.js";
+import {
+  login,
+  registration,
+  logOut,
+  googleLogin,
+  verifyOTP,
+  adminLogin,
+} from "../controller/authcontroller.js";
 import validateRequest from "../middleware/validateRequest.js";
 import { registerSchema, loginSchema } from "../validators/authSchemas.js";
 
@@ -111,5 +118,6 @@ authRoutes.post("/googlelogin", googleLogin);
  *         description: OK
  */
 authRoutes.post("/adminlogin", adminLogin);
+authRoutes.post("/verify-otp", verifyOTP);
 
 export default authRoutes;
