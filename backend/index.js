@@ -43,6 +43,13 @@ app.use(express.json());
 // Connect to MongoDB
 connectdb();
 
+if (process.env.NODE_ENV !== "production") {
+  app.use((req, res, next) => {
+    console.log("REQ:", req.method, req.url);
+    next();
+  });
+}
+
 // API routes
 app.use("/api/auth", authRoutes);
 app.use("/api/user", userRoutes); 
