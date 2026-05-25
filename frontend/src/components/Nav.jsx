@@ -10,7 +10,7 @@ import { IoSearchCircleOutline, IoSearchCircleSharp } from 'react-icons/io5';
 import { FaUserCircle } from 'react-icons/fa';
 import { MdOutlineShoppingCart, MdLogout } from 'react-icons/md';
 import { IoMdHome } from 'react-icons/io';
-import { HiOutlineCollection, HiOutlineUserGroup } from 'react-icons/hi';
+import { HiOutlineCollection } from 'react-icons/hi';
 import { RiContactsLine } from 'react-icons/ri';
 import { BsMoon, BsSun, BsSearch, BsBoxSeam } from 'react-icons/bs';
 import { FiInfo, FiUser, FiLogIn } from 'react-icons/fi';
@@ -147,7 +147,6 @@ function Nav() {
             {[
               { label: 'Home', path: '/' },
               { label: 'Collection', path: '/collection' },
-              { label: 'Contributors', path: '/contributors' },
               { label: 'Recommendations', path: '/recommendations' },
               { label: 'About', path: '/about' },
               { label: 'Contact', path: '/contact' },
@@ -495,11 +494,6 @@ px-3
           {/* Right Side */}
           <div className="flex items-center gap-2">
             {[
-              {
-                icon: HiOutlineUserGroup,
-                label: 'Creators',
-                path: '/contributors',
-              },
               {
                 icon: RiContactsLine,
                 label: 'Contact',
