@@ -1,7 +1,7 @@
 import { useContext, useState, useEffect } from 'react';
 import { shopDataContext } from '../context/ShopContext';
 import { authDataContext } from '../context/AuthContext';
-import axios from 'axios';
+import apiConfig from '../utils/apiConfig';
 import { useNavigate } from 'react-router-dom';
 import { FaMoneyBillWave } from 'react-icons/fa';
 import gsap from 'gsap';
@@ -22,7 +22,7 @@ function PlaceOrder() {
     delivery_fee,
     product: products,
   } = useContext(shopDataContext);
-  const { serverUrl, userData } = useContext(authDataContext);
+  const { userData } = useContext(authDataContext);
 
   const [formData, setFormData] = useState({
     firstname: userData?.name?.split(' ')[0] || '',
@@ -125,11 +125,7 @@ function PlaceOrder() {
         status: 'Placed',
       };
 
-      const result = await axios.post(
-        `${serverUrl}/api/order/placeorder`,
-        orderData,
-        { withCredentials: true }
-      );
+      const result = await apiConfig.post('/order/placeorder', orderData);
       if (result.data) {
         setCartItem({});
         navigate('/order');
