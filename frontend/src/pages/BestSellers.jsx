@@ -1,5 +1,8 @@
 import { useContext, useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
 import { shopDataContext } from '../context/ShopContext';
+import Card from '../components/Card';
+import Title from '../components/Title';
 
 const BestSellers = () => {
   const { product, compareList, toggleCompare } = useContext(shopDataContext);
