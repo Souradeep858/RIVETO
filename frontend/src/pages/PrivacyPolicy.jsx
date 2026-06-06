@@ -437,7 +437,7 @@ const _Section = ({ section, isActive }) => (
   </section>
 );
 
-const PrivicyPolicy = () => {
+const PrivacyPolicy = () => {
   const [activeSection, setActiveSection] = useState('information-we-collect');
 
   useEffect(() => {
@@ -600,4 +600,4 @@ const PrivicyPolicy = () => {
   );
 };
 
-export default PrivicyPolicy;
+export default PrivacyPolicy;

@@ -179,7 +179,8 @@ function App() {
         />
 
         {/* Public routes - Legal pages should be accessible without login */}
-        <Route path="/privicypolicy" element={<PrivicyPolicy />} />
+        <Route path="/privacypolicy" element={<PrivacyPolicy />} />
+        <Route path="/privicypolicy" element={<Navigate to="/privacypolicy" replace />} />
         <Route path="/termsandservices" element={<TermsAndServices />} />
         <Route path="/size-guide" element={<SizeGuide />} />
         <Route path="/cookie-policy" element={<CookiePolicy />} />
