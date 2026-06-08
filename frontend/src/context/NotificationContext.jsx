@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { createContext, useState, useEffect, useContext } from 'react';
 import { io } from 'socket.io-client';
 import { toast } from 'react-toastify';
@@ -111,6 +112,7 @@ export function NotificationProvider({ children }) {
         setSocket(null);
       }
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [userData]);
 
   const value = {
