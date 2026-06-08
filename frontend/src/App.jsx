@@ -32,6 +32,7 @@ import TermsAndServices from './pages/TermsAndServices';
 import SizeGuide from './pages/SizeGuide';
 import CookiePolicy from './pages/CookiePolicy';
 import Contributors from './pages/Contributors';
+import Notifications from './pages/Notifications';
 import NotFound from './pages/NotFound';
 import Ai from './components/Ai';
 import ComparisonPanel from './components/ComparisonPanel';
@@ -84,6 +85,16 @@ function App() {
           }
         />
         <Route path="/wishlist" element={<Wishlist />} />
+        <Route
+          path="/notifications"
+          element={
+            userData ? (
+              <Notifications />
+            ) : (
+              <Navigate to="/login" state={{ from: location.pathname }} />
+            )
+          }
+        />
         <Route
           path="/about"
           element={
